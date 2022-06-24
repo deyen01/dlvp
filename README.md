@@ -21,9 +21,11 @@ git clone https://github.com/deyen01/dlvp.git
 
 Папка webapp должны быть DocumentRoot для вашего виртуального хоста.
 В этой папке обновите зависимости:
+
 composer update
 
 npm install
+
 Затем соберите фронтенд командой npm run dev или npm run prod
 
 Через php artisan создайте новый ключ приложения.
