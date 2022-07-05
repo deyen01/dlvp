@@ -1,5 +1,7 @@
 Deyen Live Video Platform
 
+- Donate ETH 0x162Ed4517395182fEE1eB44E375DF9d7473CCab0
+
 Программа позволяет публиковать видеотрансляции в Интернете или внутренней сети по протоколу HLS.
 Используется nginx c nginx-rtmp-module, apache2, php, mariadb, фреймворк Laravel.
 
