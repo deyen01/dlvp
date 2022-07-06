@@ -1,4 +1,4 @@
-Deyen Live Video Platform
+## Deyen Live Video Platform
 
 - Donate ETH 0x162Ed4517395182fEE1eB44E375DF9d7473CCab0
 
@@ -10,25 +10,26 @@ Deyen Live Video Platform
 Видеоданные принимаются по протоколу RTMP, а передаются к конечному пользователю по HLS.
 Присутствует функция записей трансляций. Программа для каждой трансляции создаёт уникальный токен, известный поставщику контента, таким образом, именно он от своего имени размещает контент. Имеется веб-интерфейс (шаблоны Blade) и используется Livewire для динамического обновления данных.
 
-Краткая инструкция:
+## Краткая инструкция:
 Установите нужные пакеты: apache2, nginx, nginx-rtmp-module, mariadb-server, php.
 Создайте пользователя и базу данных на mariadb-server.
 Укажите домены в /etc/hosts по образцу в файле hosts_example
 
 Скачайте проект, выполнив команду
-git clone https://github.com/deyen01/dlvp.git
+- git clone https://github.com/deyen01/dlvp.git
 
 настройте сервер Apache2 по образцу в папке apacheconfig
 настройте сервер nginx по образцу в папке nginxconfig
 
 Папка webapp должны быть DocumentRoot для вашего виртуального хоста.
 В этой папке обновите зависимости:
+- composer update
+- npm install
 
-composer update
-
-npm install
-
-Затем соберите фронтенд командой npm run dev или npm run prod
+Затем соберите фронтенд командой 
+- npm run dev
+или
+- npm run prod
 
 Через php artisan создайте новый ключ приложения.
 Создайте файл настроек .env по образцу .env.example
@@ -36,7 +37,7 @@ npm install
 Создайте пароли для пользователей в файле database/seeders/UserSeeder.php
 
 Выполните миграции и первичное наполнение база данных
-php artisan migrate:fresh --seed
+- php artisan migrate:fresh --seed
 
 Создайте службу для выполнения заданий в очередях по образцу в файле unit_example
 
